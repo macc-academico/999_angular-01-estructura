@@ -1,7 +1,3 @@
-# crear un nuevo proyecto angular
-
-    ng new angular-estructura --style=scss
- 
 # link
 
  https://macc-academico.github.io/999_angular-01-estructura/
@@ -11,18 +7,7 @@
 npm install bulma
 https://bulma.io/documentation/customize/with-node-sass/
 
-# config tslint.json
-
-    "quotemark": [false, "single"],
-
-# pagina oficial
+# pagina oficial, credito a
 
     https://www.9lessons.info/2019/06/angular-8-lazy-load-routing.html
 
-# configuracion compilacion
-
-    cambiar outUrl, se encuentra archivo(angular.json)
-    "outputPath": "dosc",
-
-    compilar y subir a git, colocar en comentario
-         <!-- <base href="/"> -->
