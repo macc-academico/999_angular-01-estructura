@@ -1,6 +1,10 @@
 # crear un nuevo proyecto angular
 
     ng new angular-estructura --style=scss
+ 
+# link
+
+ https://macc-academico.github.io/999_angular-01-estructura/
 
 # Instalar Bulma.sass
 
