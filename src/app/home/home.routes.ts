@@ -1,42 +1,46 @@
-import { Route } from '@angular/router';
-import { AuthGuard } from './../guards/auth.guard';
-import { HomeComponent } from './home.component';
+import { Route } from "@angular/router";
+import { AuthGuard } from "./../guards/auth.guard";
+import { HomeComponent } from "./home.component";
 
 export const HomeRoutes: Route[] = [
   {
-    path: '',
+    path: "",
     component: HomeComponent,
     canActivate: [AuthGuard],
     children: [
       {
-        path: '',
+        path: "",
         loadChildren: () =>
-          import('../home/dashboard/dashboard.module').then(
-            m => m.DashboardModule
-          )
+          import("../home/dashboard/dashboard.module").then(
+            (m) => m.DashboardModule
+          ),
       },
       {
-        path: 'settings',
+        path: "settings",
 
         loadChildren: () =>
-          import('../home/settings/settings.module').then(m => m.SettingsModule)
+          import("../home/settings/settings.module").then(
+            (m) => m.SettingsModule
+          ),
       },
       {
-        path: 'products',
+        path: "products",
 
         loadChildren: () =>
-          import('../home/products/products.module').then(m => m.ProductsModule)
+          import("../home/products/products.module").then(
+            (m) => m.ProductsModule
+          ),
       },
       {
-        path: 'user/:username',
+        path: "user/:username",
         loadChildren: () =>
-          import('../home/user/user.module').then(m => m.UserModule)
+          import("../home/user/user.module").then((m) => m.UserModule),
       },
       {
-        path: 'user/:username/:id',
+        path: "user/:username/:id",
         loadChildren: () =>
-          import('../home/user/user.module').then(m => m.UserModule)
-      }
-    ]
-  }
+          import("../home/user/user.module").then((m) => m.UserModule),
+      },
+    ],
+  },
 ];

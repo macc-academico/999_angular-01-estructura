@@ -1,11 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ValidateService } from './../../services/validate.service';
+import { Component, OnDestroy, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+import { ValidateService } from "./../../services/validate.service";
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: "app-user",
+  templateUrl: "./user.component.html",
+  styleUrls: ["./user.component.scss"],
 })
 export class UserComponent implements OnInit, OnDestroy {
   username: string;
@@ -19,9 +19,9 @@ export class UserComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.sub = this.activatedRoute.paramMap.subscribe(params => {
-      this.verifyUsername(params.get('username'));
-      this.verifyID(params.get('id'));
+    this.sub = this.activatedRoute.paramMap.subscribe((params) => {
+      this.verifyUsername(params.get("username"));
+      this.verifyID(params.get("id"));
     });
   }
 
@@ -29,7 +29,7 @@ export class UserComponent implements OnInit, OnDestroy {
     if (data && this.validateService.checkUsername(data)) {
       this.username = data;
     } else {
-      this.router.navigate(['noPage']);
+      this.router.navigate(["noPage"]);
     }
   }
 
@@ -38,7 +38,7 @@ export class UserComponent implements OnInit, OnDestroy {
       if (this.validateService.checkID(data)) {
         this.id = data;
       } else {
-        this.router.navigate(['noPage']);
+        this.router.navigate(["noPage"]);
       }
     }
   }

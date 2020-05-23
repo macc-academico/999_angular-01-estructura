@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class AuthService {
   constructor() {}
 
   public isAuthenticated(): boolean {
-    const userData = sessionStorage.getItem('userData');
+    const userData = sessionStorage.getItem("userData");
     console.log(userData);
     if (userData && userData.length > 0) {
       return true;
@@ -18,16 +18,16 @@ export class AuthService {
 
   public async login(postData) {
     const loginApiResponce = {
-      name: 'Srinivas Tamada',
+      name: "Srinivas Tamada",
       uid: 1,
-      token: '2323523523DFSWERWERWER'
+      token: "2323523523DFSWERWERWER",
     };
-    await sessionStorage.setItem('userData', JSON.stringify(loginApiResponce));
+    await sessionStorage.setItem("userData", JSON.stringify(loginApiResponce));
     return true;
   }
 
   public async logout() {
-    await sessionStorage.removeItem('userData');
+    await sessionStorage.removeItem("userData");
     await sessionStorage.clear();
     return true;
   }

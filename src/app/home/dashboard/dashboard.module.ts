@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ComponentsModule } from '../../components/components.module';
-import { DashboardComponent } from './dashboard.component';
-import { DashboardRoutes } from './dashboard.routes';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { ComponentsModule } from "../../components/components.module";
+import { DashboardComponent } from "./dashboard.component";
+import { DashboardRoutes } from "./dashboard.routes";
 
 @NgModule({
   declarations: [DashboardComponent],
@@ -11,7 +11,7 @@ import { DashboardRoutes } from './dashboard.routes';
   imports: [
     RouterModule.forChild(DashboardRoutes),
     CommonModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
 export class DashboardModule {}

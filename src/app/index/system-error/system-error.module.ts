@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ComponentsModule } from '../../components/components.module';
-import { SystemErrorComponent } from './system-error.component';
-import { SystemErrorRoutes } from './system-error.routes';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { ComponentsModule } from "../../components/components.module";
+import { SystemErrorComponent } from "./system-error.component";
+import { SystemErrorRoutes } from "./system-error.routes";
 
 @NgModule({
   declarations: [SystemErrorComponent],
@@ -11,7 +11,7 @@ import { SystemErrorRoutes } from './system-error.routes';
   imports: [
     RouterModule.forChild(SystemErrorRoutes),
     CommonModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
 export class SystemErrorModule {}

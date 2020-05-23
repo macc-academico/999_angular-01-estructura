@@ -1,34 +1,34 @@
-import { Route } from '@angular/router';
-import { LoginGuard } from '../guards/login.guard';
-import { IndexComponent } from './index.component';
+import { Route } from "@angular/router";
+import { LoginGuard } from "../guards/login.guard";
+import { IndexComponent } from "./index.component";
 export const IndexRoutes: Route[] = [
   {
-    path: '',
+    path: "",
     component: IndexComponent,
     canActivate: [LoginGuard],
     children: [
       {
-        path: 'login',
+        path: "login",
         loadChildren: () =>
-          import('../index/login/login.module').then(m => m.LoginModule)
+          import("../index/login/login.module").then((m) => m.LoginModule),
       },
       {
-        path: 'signup',
+        path: "signup",
         loadChildren: () =>
-          import('../index/signup/signup.module').then(m => m.SignupModule)
+          import("../index/signup/signup.module").then((m) => m.SignupModule),
       },
       {
-        path: 'forgot',
+        path: "forgot",
         loadChildren: () =>
-          import('../index/forgot/forgot.module').then(m => m.ForgotModule)
+          import("../index/forgot/forgot.module").then((m) => m.ForgotModule),
       },
       {
-        path: 'system-error',
+        path: "system-error",
         loadChildren: () =>
-          import('../index/system-error/system-error.module').then(
-            m => m.SystemErrorModule
-          )
-      }
-    ]
-  }
+          import("../index/system-error/system-error.module").then(
+            (m) => m.SystemErrorModule
+          ),
+      },
+    ],
+  },
 ];

@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ComponentsModule } from '../../components/components.module';
-import { SettingsComponent } from './settings.component';
-import { SettingsRoutes } from './settings.routes';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { ComponentsModule } from "../../components/components.module";
+import { SettingsComponent } from "./settings.component";
+import { SettingsRoutes } from "./settings.routes";
 
 @NgModule({
   declarations: [SettingsComponent],
@@ -11,7 +11,7 @@ import { SettingsRoutes } from './settings.routes';
   imports: [
     RouterModule.forChild(SettingsRoutes),
     CommonModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
 export class SettingsModule {}

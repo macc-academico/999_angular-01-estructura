@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { ComponentsModule } from '../../components/components.module';
-import { ProductsComponent } from './products.component';
-import { ProductsRoutes } from './products.routes';
+import { CommonModule } from "@angular/common";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { ComponentsModule } from "../../components/components.module";
+import { ProductsComponent } from "./products.component";
+import { ProductsRoutes } from "./products.routes";
 
 @NgModule({
   declarations: [ProductsComponent],
@@ -11,7 +11,7 @@ import { ProductsRoutes } from './products.routes';
   imports: [
     RouterModule.forChild(ProductsRoutes),
     CommonModule,
-    ComponentsModule
-  ]
+    ComponentsModule,
+  ],
 })
 export class ProductsModule {}
